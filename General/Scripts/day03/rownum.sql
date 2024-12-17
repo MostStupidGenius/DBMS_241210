@@ -1,0 +1,6 @@
+-- ROWNUM으로 출력할 행 갯수 제한하기
+SELECT ROWNUM, EMPLOYEE_ID, FIRST_NAME, LAST_NAME
+FROM EMPLOYEES
+WHERE ROWNUM >= 1;
+-- ROWNUM을 WHERE에서 필터링할 때
+-- 반드시 1이 범위 안에 포함되어야 한다.
