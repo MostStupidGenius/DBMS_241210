@@ -128,7 +128,9 @@ SELECT AVG(SALARY)
 FROM EMPLOYEES e
 WHERE SALARY > 5000;
 
-
+-- 서브쿼리를 WHERE 혹은 HAVING에서 사용하는 경우
+-- 서브쿼리의 결과값은 하나의 행, 하나의 열이어야 정상적으로
+-- 연산이 수행된다. -> 서브쿼리 안에서 집계함수를 사용해야 한다.
 
 
 

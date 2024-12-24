@@ -1,0 +1,25 @@
+-- ※STUDENT, SUBJECT, TAKING_CLASS 테이블을 생성한 후 아래 내용 진행
+
+-- 제약조건 추가
+-- STUDENT 테이블의 GRADE 컬럼에
+-- CHECK(GRADE BETWEEN 1 AND 4) 추가
+ALTER TABLE STUDENT 
+ADD CONSTRAINT CK_GRADE CHECK(GRADE BETWEEN 1 AND 4);
+
+-- 제약 조건 수정(삭제->추가)
+-- TAKING_CLASS의 IS_TAKING 컬럼의 제약조건인
+-- 'Y', 'N' CHECK 제약 조건을
+-- 'Y' -> 1
+-- 'N' -> 0
+-- 위와 같이 바꾸려고 한다.
+-- 기존 제약조건 삭제
+ALTER TABLE TAKING_CLASS 
+DROP CONSTRAINT CK_TAKING;
+-- 새로운 제약조건 추가
+ALTER TABLE TAKING_CLASS 
+ADD CONSTRAINT CK_TAKING CHECK(IS_TAKING IN (0, 1));
+
+
+
+
+
