@@ -21,8 +21,9 @@ INCREMENT BY 1 -- 시퀀스의 증가값
 -- 시퀀스의 현재 값 확인
 -- 시퀀스명.CURRVAL
 -- 현재 시퀀스 값을 확인한다.
---SELECT STUDENT_SEQ.CURRVAL
---FROM DUAL;
+-- 한번도 사용하지 않았다면 확인 불가
+SELECT STUDENT_SEQ.CURRVAL
+FROM DUAL;
 SELECT *
 FROM STUDENT s ;
 
